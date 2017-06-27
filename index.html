@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Generate secure passphrases with the Diceware method">
 	<meta name="author" content="Michael Henriksen">
-	<title>Diceware Passphrase Generator</title>
+	<title>Generador de frases Diceware</title>
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/assets/application.css">
 </head>
@@ -13,10 +13,10 @@
 <body>
 	<div class="container">
 		<div id="seeder" class="seeder">
-			<p>Move your cursor around to seed the random number generator...</p>
+			<p>Mueve tu cursor para alimentar al generador de números aleatorios...</p>
 			<div class="progress">
   			<div class="progress-bar" id="seed_progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
-  				<span class="sr-only">0% seeded</span>
+  				<span class="sr-only">0% alimentado</span>
   			</div>
 			</div>
 		</div>
@@ -25,10 +25,10 @@
 			<div id="passphrase" class="passphrase"></div>
 
       <div class="btn-group btn-group-justified" id="new_passphrase">
-        <button type="button" class="btn" data-word-count="5">5 words</button>
-        <button type="button" class="btn" data-word-count="6">6 words</button>
-        <button type="button" class="btn" data-word-count="7">7 words</button>
-        <button type="button" class="btn" data-word-count="8">8 words</button>
+        <button type="button" class="btn" data-word-count="5">5 palabras</button>
+        <button type="button" class="btn" data-word-count="6">6 palabras</button>
+        <button type="button" class="btn" data-word-count="7">7 palabras</button>
+        <button type="button" class="btn" data-word-count="8">8 palabras</button>
       </div>
 
 		</div>
@@ -36,8 +36,9 @@
 
 	<footer>
 		<div id="about">
-			Created by <a href="https://twitter.com/michenriksen">Michael Henriksen</a> &middot;
-			<a data-toggle="modal" href="#what_is_this">What is this?</a>
+			Creado por <a href="https://twitter.com/michenriksen">Michael Henriksen</a> &middot;
+      Adaptado al español por <a href="https://twitter.com/omaidog">David Salinas</a> &middot;
+			<a data-toggle="modal" href="#what_is_this">¿Qué es esto?</a>
 		</div>
 	</footer>
 
@@ -46,40 +47,39 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title">What is this?</h4>
+          <h4 class="modal-title">¿Qué es esto?</h4>
         </div>
         <div class="modal-body">
-          <p>A simple passphrase generator that uses the <a href="https://en.wikipedia.org/wiki/Diceware">Diceware</a> method to generate secure passphrases.</p>
+          <p>Un generador simple de frases de contraseña que usa el método <a href="https://en.wikipedia.org/wiki/Diceware">Diceware</a> para generar contraseñas seguras.</p>
 
           <hr />
 
-          <h4>Why is it collecting my mouse movements?</h4>
+          <h4>¿Por qué recoge los movimientos de mi mouse?</h4>
 
-          <p>The app is using the <a href="https://github.com/davidbau/seedrandom">seedrandom.js</a> library to strengthen the pseudo-random number generator by seeding it with mouse coordinates and other sources of entropy. If you use a modern browser, it will
-          use the much more secure <code>window.crypto</code> as its random number source.</p>
-
-          <hr />
-
-          <h4>Want to have your own?</h4>
-
-          <p>The complete code for the app is <a href="https://github.com/michenriksen/diceware">available on GitHub</a> ready to be forked and hosted by yourself.</p>
+          <p>La aplicación usa la librería <a href="https://github.com/davidbau/seedrandom">seedrandom.js</a> para reforzar el generador de números pseudo-random alimentándolo con coordenadas del cursor y otras fuentes de entropía. Si usas un navegador moderno, usará el (mucho más seguro) método <code>window.crypto</code> como fuente de números random.</p>
 
           <hr />
 
-          <h4>Thanks</h4>
+          <h4>¿Quieres tener uno propio?</h4>
 
-          <p>Thanks to <a href="https://twitter.com/thegrugq">the grugq</a> for inspiration,
-             <a href="http://davidbau.com/">David Bau</a> for seedrandom.js
-             and <a href="http://world.std.com/~reinhold/diceware.html">Arnold G. Reinhold</a> for the Diceware word list.</p>
+          <p>El código completo de la aplicación está <a href="https://github.com/michenriksen/diceware">disponible en GitHub</a> listo para que hagas con él lo que quieras.</p>
+
+          <hr />
+
+          <h4>Agradecimientos</h4>
+
+          <p>Gracias a <a href="https://twitter.com/thegrugq">the grugq</a> por la inspiración,
+             <a href="http://davidbau.com/">David Bau</a> por seedrandom.js
+             y <a href="http://world.std.com/~reinhold/diceware.html">Arnold G. Reinhold</a> por el diccionario Diceware.</p>
 
           <hr />
 
           <h4>Disclaimer</h4>
 
-          <p>diceware.herokuapp.com and its authors are not responsible for any loss of data or personal information. Passphrases are used at the user’s own risk and no liability will be asumed. By using this website, you agree that the website and its authors are not liable for any losses incurred. diceware.herokuapp.com and its authors are not responsible or liable, directly or indirectly, for any damage or loss caused by or in connection with the use of, or reliance on, any such content, goods or services available on or through this website.</p>
+          <p>This app and its authors are not responsible for any loss of data or personal information. Passphrases are used at the user’s own risk and no liability will be asumed. By using this website, you agree that the website and its authors are not liable for any losses incurred. This app and its authors are not responsible or liable, directly or indirectly, for any damage or loss caused by or in connection with the use of, or reliance on, any such content, goods or services available on or through this website.</p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
         </div>
       </div>
     </div>
